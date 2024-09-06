@@ -411,12 +411,10 @@ namespace UnityEngine.UI
         /// ]]>
         ///</code>
         /// </example>
-#if PACKAGE_ANIMATION
         public Animator animator
         {
             get { return GetComponent<Animator>(); }
         }
-#endif
 
         protected override void Awake()
         {
@@ -1100,7 +1098,6 @@ namespace UnityEngine.UI
 
         void TriggerAnimation(string triggername)
         {
-#if PACKAGE_ANIMATION
             if (transition != Transition.Animation || animator == null || !animator.isActiveAndEnabled || !animator.hasBoundPlayables || string.IsNullOrEmpty(triggername))
                 return;
 
@@ -1111,7 +1108,6 @@ namespace UnityEngine.UI
             animator.ResetTrigger(m_AnimationTriggers.disabledTrigger);
 
             animator.SetTrigger(triggername);
-#endif
         }
 
         /// <summary>
