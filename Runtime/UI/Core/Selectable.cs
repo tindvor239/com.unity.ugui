@@ -736,6 +736,7 @@ namespace UnityEngine.UI
             /// The UI object cannot be selected.
             /// </summary>
             Disabled,
+
         }
 
         // Selection logic

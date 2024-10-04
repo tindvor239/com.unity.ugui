@@ -16,6 +16,7 @@ namespace UnityEditor.UI
         const string kPressedTrigger = "m_PressedTrigger";
         const string kSelectedTrigger = "m_SelectedTrigger";
         const string kDisabledTrigger = "m_DisabledTrigger";
+        const string kSelectedHighlight = "m_SelectedHighlightTrigger";
 
         public override void OnGUI(Rect rect, SerializedProperty prop, GUIContent label)
         {
@@ -41,7 +42,7 @@ namespace UnityEditor.UI
 
         public override float GetPropertyHeight(SerializedProperty prop, GUIContent label)
         {
-            return 5 * EditorGUIUtility.singleLineHeight + 4 * EditorGUIUtility.standardVerticalSpacing;
+            return 6 * EditorGUIUtility.singleLineHeight + 5 * EditorGUIUtility.standardVerticalSpacing;
         }
 
         public override VisualElement CreatePropertyGUI(SerializedProperty property)
